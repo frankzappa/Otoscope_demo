@@ -1062,6 +1062,7 @@ int connectDevice()
         printf("------------------ client.mm 1059, connect_result: ", connect_return);
         //if (connect(sock, (struct sockaddr*)&server, sizeof(server)) < 0) {
         if (connect_return < 0) {
+            printf("Connection failed with errno: %d\n ", errno);
             printf("--------------- client.mm 1062, server.sin_len, server.sin_family, server.sin_port, server.sin_addr.s_addr, server.sin_zero, sock: %u, %u, %u, %u, %c, %d\n", server.sin_len, server.sin_family, server.sin_port, server.sin_addr.s_addr, server.sin_zero, sock);
             printf("connect failed, %d\n", counter);
             counter++;
