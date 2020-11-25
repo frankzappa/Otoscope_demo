@@ -1044,6 +1044,9 @@ int connectDevice()
     int return_val = -1;
     int port=11666;
     char* server_ip = "192.168.12.100";
+    
+    memset(&server, 0, sizeof(server));
+    
     printf("target server %s %d\n", server_ip, port);
 
     /* fill server info */
